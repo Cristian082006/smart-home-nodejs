@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "private": true,
   "scripts": {
-    "build": "tsc && cp src/*.json dist/",
+    "build": "tsc && copy src/*.json dist/",
     "deploy": "npm run build && gcloud app deploy && gcloud app logs tail -s default",
     "lint": "tslint -p .",
     "start": "node dist/index.js",
@@ -30,6 +30,8 @@
     "ngrok": "^3.2.5"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
     "firebase-tools": "^6.10.0",
     "tslint": "^5.9.1",
     "tslint-eslint-rules": "^5.1.0",
